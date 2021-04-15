@@ -1,6 +1,5 @@
 <!-- App.svelte -->
-<script>
-  /* component logic will go here */
+<script lang="typescript">
 </script>
 
 <div class="App">
