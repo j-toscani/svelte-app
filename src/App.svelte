@@ -1,20 +1,14 @@
 <!-- App.svelte -->
 <script lang="typescript">
+  import Nested from "./Nested.svelte";
+
   let count = 0;
 
   function handleClick() {
     count += 1;
   }
 
-  // Computed Prop
   $: doubled = count * 2;
-
-  function logCount(count: number) {
-    console.log(`The count is ${count}`);
-  }
-
-  // Computed Prop
-  $: logCount(count);
 </script>
 
 <div class="App">
@@ -31,8 +25,14 @@
 
   <main>
     <button on:click={handleClick}> Add </button>
-    <span> Counter is : {count}</span>
-    <span>Doubled: {doubled} </span>
+    <span>
+      Counter is : {count}
+    </span>
+    <span>
+      Doubled {doubled}
+    </span>
+
+    <Nested answer={"42"} />
   </main>
 </div>
 
