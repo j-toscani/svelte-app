@@ -1,6 +1,8 @@
 <!-- App.svelte -->
 <script lang="typescript">
   import Nested from "./Nested.svelte";
+  import Info from "./Info.svelte";
+  import LoginButtons from "./LoginButtons.svelte";
 
   let count = 0;
 
@@ -9,6 +11,13 @@
   }
 
   $: doubled = count * 2;
+
+  const pkg = {
+    name: "svelte",
+    version: 3,
+    speed: "blazing",
+    website: "https://svelte.dev",
+  };
 </script>
 
 <div class="App">
@@ -33,6 +42,8 @@
     </span>
 
     <Nested answer={"42"} />
+    <Info {...pkg} />
+    <LoginButtons />
   </main>
 </div>
 
