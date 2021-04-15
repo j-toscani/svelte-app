@@ -1,18 +1,14 @@
 <!-- App.svelte -->
 <script lang="typescript">
+  import Nested from "./Nested.svelte";
 </script>
 
 <div class="App">
-  <header class="App-header">
-    <a
-      class="App-link"
-      href="https://svelte.dev"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Learn Svelte
-    </a>
-  </header>
+  <header class="App-header" />
+
+  <main>
+    <Nested answer={"42"} />
+  </main>
 </div>
 
 <style>
